@@ -1,0 +1,69 @@
+{
+  "isTruncated": true,
+  "resultCount": 10,
+  "files": [
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010000.nc",
+      "size": 157460,
+      "created": "2025-06-11T12:34:22+00:00",
+      "lastModified": "2025-06-11T21:52:02+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010010.nc",
+      "size": 157460,
+      "created": "2025-06-11T14:00:47+00:00",
+      "lastModified": "2025-06-12T06:13:22+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010020.nc",
+      "size": 157460,
+      "created": "2025-06-11T17:03:03+00:00",
+      "lastModified": "2025-06-12T06:13:24+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010030.nc",
+      "size": 157460,
+      "created": "2025-06-11T14:00:47+00:00",
+      "lastModified": "2025-06-12T00:47:28+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010040.nc",
+      "size": 157460,
+      "created": "2025-06-11T13:49:39+00:00",
+      "lastModified": "2025-06-12T04:10:26+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010050.nc",
+      "size": 157460,
+      "created": "2025-06-11T15:07:48+00:00",
+      "lastModified": "2025-06-12T04:10:26+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010100.nc",
+      "size": 157460,
+      "created": "2025-06-11T13:49:39+00:00",
+      "lastModified": "2025-06-12T13:11:32+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010110.nc",
+      "size": 157460,
+      "created": "2025-06-11T13:49:40+00:00",
+      "lastModified": "2025-06-12T12:40:16+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010120.nc",
+      "size": 157460,
+      "created": "2025-06-11T15:07:50+00:00",
+      "lastModified": "2025-06-12T13:51:29+00:00"
+    },
+    {
+      "filename": "KMDS__OPER_P___10M_OBS_L2_201201010130.nc",
+      "size": 157460,
+      "created": "2025-06-12T06:17:52+00:00",
+      "lastModified": "2025-06-12T13:11:34+00:00"
+    }
+  ],
+  "maxResults": 10,
+  "startAfterFilename": "",
+  "nextPageToken": "eyJmaWxlX25hbWUiOiAiS01EU19fT1BFUl9QX19fMTBNX09CU19MMl8yMDEyMDEwMTAxMzAubmMiLCAiaWQiOiAiMTAtbWludXRlLWluLXNpdHUtbWV0ZW9yb2xvZ2ljYWwtb2JzZXJ2YXRpb25zXzEuMF9LTURTX19PUEVSX1BfX18xME1fT0JTX0wyXzIwMTIwMTAxMDEzMC5uYyJ9"
+}
