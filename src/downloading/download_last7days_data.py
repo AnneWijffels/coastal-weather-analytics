@@ -1,5 +1,7 @@
 import os
 import requests
+import json
+import pandas as pd
 from datetime import datetime, timedelta, timezone
 
 # =========================
@@ -41,20 +43,38 @@ print("Datetime range:", datetime_range)
 response = requests.get(url, headers=headers, params=params)
 
 # =========================
-# SAVE DATA
+# PARSE JSON DIRECTLY
 # =========================
 
-if response.status_code == 200:
-    os.makedirs("data/raw", exist_ok=True)
+data = response.json()
 
-    filename = f"data/raw/{STATION_ID}_last7days.csv"
+# KNMI returns CoverageCollection
+coverage = data["coverages"][0]
 
-    with open(filename, "w") as f:
-        f.write(response.text)
+times = coverage["domain"]["axes"]["t"]["values"]
+parameters = data["parameters"].keys()
+ranges = coverage["ranges"]
 
-    print("✅ Data successfully saved to:", filename)
+df = pd.DataFrame(index=pd.to_datetime(times))
 
-else:
-    print("❌ Request failed")
-    print("Status code:", response.status_code)
-    print(response.text)
+for param in parameters:
+    df[param] = coverage["ranges"][param]["values"]
+
+df.index.name = "timestamp"
+
+# =========================
+# SAVE CLEAN FILES
+# =========================
+
+os.makedirs("data/processed", exist_ok=True)
+
+# Save clean CSV (real CSV)
+df.to_csv(f"data/processed/{STATION_ID}_last7days_clean.csv")
+
+# Save original JSON if you want archive
+with open(f"data/raw/{STATION_ID}_last7days.json", "w") as f:
+    import json
+    json.dump(data, f)
+
+print("✅ Data processed and saved.")
+print(df.head())
